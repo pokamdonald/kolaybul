@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "647613908727",
+    "project_id": "kolaybul-ff000",
+    "storage_bucket": "kolaybul-ff000.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647613908727:android:782bea1510acd874f735f2",
+        "android_client_info": {
+          "package_name": "com.finance.kolaybul"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz8dqhqX5p7F40CIWIE33KcIESavc3ZOA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#FF0000FF</color> <!-- Blue -->
+    <color name="red">#FFFF0000</color> <!-- Red -->
+    <color name="green">#FF00FF00</color> <!-- Green -->
+    <color name="yellow">#FFFFFF00</color> <!-- Yellow -->
+    <color name="black">#FF000000</color> <!-- Black -->
+    <color name="white">#FFFFFFFF</color> <!-- White -->
+    <color name="gray">#FF808080</color> <!-- Gray -->
+    <color name="orange">#FFFFA500</color> <!-- Orange -->
+    <color name="purple">#FF800080</color> <!-- Purple -->
+    <color name="pink">#FFFFC0CB</color> <!-- Pink -->
+    <color name="cyan">#FF00FFFF</color> <!-- Cyan -->
+    <color name="brown">#FF8B4513</color> <!-- Brown -->
+    <color name="turquoise">#FF40E0D0</color> <!-- Turquoise -->
+    <color name="gold">#FFFFD700</color> <!-- Gold -->
+    <color name="silver">#FFC0C0C0</color> <!-- Silver -->
+    <color name="app_primary">#F13B49BC</color>
+
+
+</resources>

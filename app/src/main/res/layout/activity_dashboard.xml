@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- App Bar (Profile & Filter) -->
+    <RelativeLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/rounded_appbar"
+        android:padding="8dp">
+
+        <!-- Filter Button -->
+        <ImageView
+            android:id="@+id/btnFilter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/filter"
+            android:contentDescription="Filter Button"
+            android:scaleType="centerInside"
+            app:tint="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOME"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_centerInParent="true"/>
+
+
+        <!-- Profile Button -->
+        <ImageView
+            android:id="@+id/btnProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/account"
+            android:contentDescription="Profile Button"
+            android:scaleType="centerInside" />
+    </RelativeLayout>
+
+    <!-- RecyclerView for displaying items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBar"
+        android:layout_above="@id/btnAddItem"
+        android:padding="16dp"
+        android:clipToPadding="false" />
+
+    <!-- Floating Button for Adding Items -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/add"
+        android:contentDescription="Add Item"
+        android:tint="@android:color/white"
+        android:backgroundTint="@color/app_primary" />
+
+    <!-- Floating Button for Logout -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/logout"
+        android:contentDescription="Logout"
+        android:tint="@android:color/white"
+        android:backgroundTint="@color/app_primary" />
+
+    <!-- 🔥 Background Overlay (Click Outside to Hide Filter) -->
+    <View
+        android:id="@+id/filterOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:alpha="0.5"
+        android:visibility="gone"
+        android:onClick="hideFilterPanel"/>
+
+    <!-- 🔥 Sliding Filter Panel -->
+    <LinearLayout
+        android:id="@+id/filterPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/rounded_box"
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:paddingBottom="24dp">
+
+        <!-- Filter Options Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter Options"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Status Filter -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Status"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:popupBackground="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Date Filter -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnSelectDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="Select Date"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Selected Date Display -->
+        <TextView
+            android:id="@+id/txtSelectedDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Date Selected"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@android:color/darker_gray"
+            android:visibility="visible"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Apply Filter Button -->
+        <Button
+            android:id="@+id/btnApplyFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="Apply Filter"
+            android:backgroundTint="@color/black"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+</RelativeLayout>

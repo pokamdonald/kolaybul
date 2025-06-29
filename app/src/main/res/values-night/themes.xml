@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.KolayBul" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Keep the same color in dark mode -->
+        <item name="colorPrimary">@color/app_primary</item>
+        <item name="colorPrimaryContainer">@color/app_primary</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Background and Surface Colors -->
+        <item name="android:colorBackground">@color/app_primary</item>
+    </style>
+</resources>

@@ -1,0 +1,5 @@
+<!-- res/drawable/rounded_appbar.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/app_primary" /> <!-- Replace with your app's primary color -->
+    <corners android:radius="24dp" /> <!-- Adjust radius for roundness -->
+</shape>

@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">KolayBul</string>
+    <string name="menu_lost">Lost Items</string>
+    <string name="menu_found">Found Items</string>
+    <string name="menu_claim">My Claims</string>
+
+    <string-array name="type_options">
+        <item>Electronics</item>
+        <item>Bags</item>
+        <item>Keys</item>
+        <item>Dress</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="spinnerCategory">
+        <item>Electronics</item>
+        <item>Keys</item>
+        <item>Books</item>
+        <item>Bags</item>
+        <item>Wallet</item>
+    </string-array>
+
+    <string name="select_category_prompt">Select Category</string>
+
+    <string name="RoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </string>
+
+    <string-array name="status_options">
+        <item>Lost</item>
+        <item>Found</item>
+    </string-array>
+    <!-- Rounded Image Style -->
+    <style name="CustomRoundedImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>
